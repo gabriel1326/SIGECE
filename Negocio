@@ -1,0 +1,154 @@
+# 💼 Negócio, custos e riscos
+
+[← Voltar ao README](../README.md)
+
+## 📈 Modelo de negócio
+
+**SaaS** com **licença anual + taxa por escola ativa**, contratado pela Prefeitura (licitação ou convênio) e pago com recursos da educação municipal.
+
+| Criamos valor | Entregamos valor | Capturamos valor |
+|---|---|---|
+| Capacitação das equipes das escolas | App mobile para famílias | Suporte técnico e atualizações inclusos |
+| Desenvolvimento contínuo | Painel web para escolas e gestores | Contrato SaaS com a Prefeitura |
+| Parceria com a Prefeitura | Alertas automáticos em tempo real | Taxa por escola ativa |
+| Conformidade com LGPD e normas do MEC | Relatórios mensais para a Prefeitura | |
+
+### 💵 Plano financeiro
+
+| Item | Valor |
+|---|---:|
+| Licença por escola | R$ 400,00/mês |
+| Escolas no cenário provável | ~75 (80% da meta) |
+| Taxa anual da Prefeitura | R$ 2.652,00/ano (R$ 221,00/mês) |
+| **Receita mensal estimada** | **R$ 30.221,00** |
+| Investimento inicial | R$ 250,00 (banco de dados) |
+| Custo fixo mensal | R$ 25.150,00 (salários R$ 25.000 + hospedagem ~R$ 150) |
+| Ponto de equilíbrio | ~R$ 25.487,35/mês (cerca de 64 escolas) |
+
+### 🔮 Cenários
+
+| Indicador | 😐 Provável | 😟 Pessimista | 😄 Otimista |
+|---|---:|---:|---:|
+| Escolas com licença ativa | 75 | 56 | 94 |
+| Mensalidade por escola | R$ 400 | R$ 360 | R$ 400 |
+| Receita mensal | R$ 30.221 | R$ 20.381 | R$ 37.821 |
+| Resultado operacional mensal | R$ 4.671 | -R$ 5.669 | R$ 12.121 |
+| Resultado operacional anual | R$ 56.052 | -R$ 68.028 | R$ 145.452 |
+| Margem de contribuição | 98,68% | 97,30% | 98,81% |
+| Lucratividade | 15,46% | -27,82% | 32,05% |
+| Escolas para o equilíbrio | 64 | 72 | 64 |
+
+> Valores de simulação, a serem revistos quando houver dados reais.
+
+### 🚀 Busca de investimento
+
+| Validação | Desenvolvimento | Implantação | Expansão |
+|---|---|---|---|
+| Pesquisa com escolas piloto | MVP do sistema completo | Rollout para 80% das escolas | 100% das escolas do município |
+| Protótipo do app mobile | Testes com ao menos 2 escolas piloto | Capacitação das equipes | Municípios vizinhos |
+| Validação com pais e cantina | Ajustes com feedback dos testadores | Integração com dados da Prefeitura | |
+
+## 💰 Custos
+
+### Estimativa do TAP (4 anos)
+
+| Item | Valor |
+|---|---:|
+| Hospedagem e infraestrutura de servidores (4 anos) | R$ 24.000 |
+| Licenças de ferramentas de desenvolvimento | R$ 5.000 |
+| Dispositivos para testes (tablets/smartphones) | R$ 8.000 |
+| Treinamento e implantação nas escolas | R$ 10.000 |
+| Documentação e materiais | R$ 2.000 |
+| Salários: R$ 2.500 por desenvolvedor, 4 anos, 8 desenvolvedores | R$ 960.000 |
+| **Total** | **R$ 1.009.000** |
+
+> No Plano de Negócios, a estimativa foi atualizada para 10 desenvolvedores e hospedagem de R$ 7.200: total de **R$ 1.232.200**.
+
+### Infraestrutura (Documentação de Requisitos)
+
+| Recurso | Especificação | Provedor | R$/mês |
+|---|---|---|---:|
+| Servidor de aplicação | Instância em nuvem com auto scaling | AWS / Render | 285,00 |
+| Banco de dados | Instância gerenciada com SSD, backup diário e Multi-AZ | AWS / Supabase | 240,00 |
+| Armazenamento | Objetos para laudos | AWS / Cloudflare | 25,00 |
+| Notificações | Push ilimitado Android e iOS | Firebase | 0,00 |
+| E-mail | Tokens de recuperação de senha | Amazon SES / Resend | 30,00 |
+| **Total mensal** | | | **580,00** |
+
+| Item | Cobrança | Valor |
+|---|---|---:|
+| Domínio | Anual | R$ 40,00 |
+| Certificado SSL/TLS | Gratuito | R$ 0,00 |
+| Google Play Console | Taxa única | R$ 145,00 |
+| Apple Developer Program | Anual | R$ 565,00 |
+
+**Investimento total no 1º ano:** infraestrutura R$ 6.960 + licenças de publicação R$ 710 + domínio R$ 40 = **R$ 7.710,00**
+
+### Fornecedores estimados
+
+| Item | Fornecedor / categoria | Preço est. | Prazo |
+|---|---|---:|---|
+| Hospedagem e infraestrutura em nuvem (4 anos) | AWS, Azure ou GCP | R$ 24.000 | Imediato (SaaS) |
+| Licenças de ferramentas | IDEs e plataformas | R$ 5.000 | Imediato (SaaS) |
+| Dispositivos para testes | Revendas de eletrônicos | R$ 8.000 | 15 a 30 dias |
+| Treinamento e implantação | Equipe própria | R$ 10.000 | Conforme rollout |
+| Documentação e materiais | Gráficas | R$ 2.000 | 10 a 15 dias |
+
+## 🧭 Matriz F.O.F.A.
+
+| 💪 Forças | 🌱 Oportunidades |
+|---|---|
+| Solução integrada: materiais, uniformes e cantina em um só sistema | Nenhum concorrente identificado em Saquarema |
+| Alergias integradas ao cardápio, com alertas às famílias | Necessidade de substituir planilhas por gestão digital |
+| Web e mobile, em nuvem e escalável | Normas de alimentação escolar (PNAE) preveem atenção a restrições |
+| Margem de contribuição de ~98,7% e investimento inicial de R$ 250 | Recursos da educação municipal como fonte de pagamento |
+| Equipe multidisciplinar com processo ágil | Expansão de 80% para 100% das escolas e outros municípios |
+
+| 🧱 Fraquezas | ⛈️ Ameaças |
+|---|---|
+| Receita concentrada em um único cliente | Atraso na contratação e restrição orçamentária da Prefeitura |
+| Margem de segurança estreita (equilíbrio em ~64 de 75 escolas) | Pressão por descontos na negociação |
+| Equipe de estudantes, com pouca experiência comercial | Falta de internet nas escolas e baixa adesão dos responsáveis |
+| Sem sede fixa, marca estabelecida ou casos de sucesso | Incidente de segurança ou descumprimento da LGPD |
+| Capital de giro ainda indefinido | Entrada de sistemas de gestão escolar de maior porte |
+
+## 🛡️ Riscos
+
+| ID | Risco |
+|---|---|
+| 001 | Restrição alimentar não cadastrada |
+| 002 | Mudança de gestão municipal que descontinue o projeto |
+| 003 | Falta de acesso à internet nas escolas |
+| 004 | Violação de dados dos alunos (LGPD) |
+| 005 | Baixa alfabetização digital dos responsáveis |
+| 006 | App com desempenho ruim em smartphones de baixo custo |
+| 007 | Compartilhamento de credenciais entre alunos |
+| 008 | Relatório de consumo divergente do consumo real |
+| 009 | Vinculação incorreta entre responsável e aluno |
+| 010 | Resistência da equipe ao sistema digital |
+
+| Risco de negócio | Ação preventiva | Plano B |
+|---|---|---|
+| Adesão lenta das escolas | Demonstrações ao vivo, vídeos e grupo piloto | Implantar em etapas, priorizando escolas com maior volume de estoque |
+| Atraso na contratação | Antecipar apresentação e documentação técnica | Reduzir atividades e gastos até a assinatura |
+| Necessidade de mais recursos | Definir capital de giro e manter reserva | Renegociar preço e prazos com a Prefeitura |
+| Custos de nuvem acima do previsto | Comparar AWS, Azure e GCP e criar alertas de consumo | Otimizar a arquitetura ou migrar de provedor |
+| Entrada de concorrentes | Manter o diferencial da gestão integrada e o suporte | Ajustar preço e acelerar entregas |
+| Falta de internet ou baixa adesão | Incluir internet no contrato e oferecer tutoriais | Treinamento presencial adicional |
+| Incidente de segurança ou LGPD | Backup diário, controle de acesso e monitoramento | Plano de recuperação de desastres e comunicação aos afetados |
+
+## 🧑‍💼 Equipe técnica prevista
+
+| Cargo / função | Qtde. | Atribuições |
+|---|:-:|---|
+| Gerente de projeto | 1 | Cronograma, orçamento e comunicação com a Secretaria |
+| Scrum Master | 1 | Cerimônias ágeis e remoção de impedimentos |
+| Desenvolvedor back-end | 2 | API, regras de negócio e banco de dados |
+| Desenvolvedor front-end web | 1 | Interface web de escolas e Secretaria |
+| Desenvolvedor mobile | 1 | Aplicativo dos responsáveis |
+| Analista de qualidade (QA) | 1 | Testes funcionais e automatizados |
+| Engenheiro DevOps | 1 | Nuvem e pipelines CI/CD |
+| UX/UI Designer | 1 | Protótipos e experiência do usuário |
+| Analista de suporte técnico | 1 | Atendimento a escolas, Secretaria e responsáveis |
+
+**Processo:** requisitos → planejamento → desenvolvimento → revisão por pares → testes → homologação com a Secretaria → deploy via CI/CD → Sprint Review e Retrospective.
