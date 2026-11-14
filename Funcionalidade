@@ -1,0 +1,37 @@
+---
+name: ✨ Sugerir funcionalidade
+about: Ideia ou requisito novo para o SIGECE
+title: "[FEAT] "
+labels: enhancement
+---
+
+## ✨ Qual é a ideia?
+
+<!-- Descreva a funcionalidade em poucas linhas -->
+
+## 🎯 Problema que ela resolve
+
+<!-- Quem precisa disso e por quê? (ex.: equipe da escola, responsável, Secretaria) -->
+
+## 📋 Requisito relacionado
+
+<!-- Ex.: RF021, RF030. Deixe em branco se for um requisito novo -->
+
+## 📦 Módulo
+
+- [ ] Materiais didáticos
+- [ ] Uniformes
+- [ ] Cantina
+- [ ] Alimentação segura (alergias e cardápio)
+- [ ] App dos responsáveis
+- [ ] Painel e relatórios
+- [ ] Administração e acesso
+
+## ✅ Critérios de aceite
+
+- [ ]
+- [ ]
+
+## 💬 Observações
+
+<!-- Referências, protótipos, links -->
