@@ -1,0 +1,30 @@
+---
+name: 🐛 Reportar bug
+about: Algo não está funcionando como deveria
+title: "[BUG] "
+labels: bug
+---
+
+## 🐛 Descrição
+
+<!-- O que aconteceu? -->
+
+## 🔁 Como reproduzir
+
+1. Vá para '...'
+2. Clique em '...'
+3. Veja o erro
+
+## ✅ Comportamento esperado
+
+<!-- O que deveria acontecer? -->
+
+## 📸 Prints ou logs
+
+<!-- Não inclua dados reais de alunos ou responsáveis -->
+
+## 🖥️ Ambiente
+
+- Plataforma: Web / Android / iOS
+- Navegador ou versão do SO:
+- Perfil de usuário: Administrador / Secretaria / Direção / Equipe / Cantina / Responsável
