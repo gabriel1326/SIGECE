@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1E5AA8,2E8B3A,F2C500,D62828&height=190&section=header&text=SIGECE&fontSize=64&fontColor=ffffff&fontAlignY=38&desc=Sistema%20Integrado%20de%20Gest%C3%A3o%20de%20Estoques%20e%20Consumo%20Escolar&descSize=17&descAlignY=60" alt="SIGECE" width="100%"/>
 
-**Gestão integrada de cantina, materiais didáticos e uniformes das escolas municipais de Saquarema/RJ, com controle individualizado de alergias e restrições alimentares integrado ao cardápio.**
+**Gestão integrada do estoque escolar das escolas municipais de Saquarema/RJ: materiais didáticos, uniformes e itens da cantina em um só sistema, com painel web para escolas e gestores e aplicativo mobile para os responsáveis.**
 
 <br>
 
@@ -52,11 +52,11 @@
 
 ## 📖 Sobre o projeto
 
-O **SIGECE** é um software **web e mobile** que garante melhor gerenciamento do estoque de **alimentos, materiais didáticos e uniformes** das escolas municipais de **Saquarema/RJ**, substituindo as tabelas e planilhas manuais por um sistema único, em nuvem e em tempo real.
+O **SIGECE** é um sistema **web e mobile** de **gestão de estoque escolar** para as escolas municipais de **Saquarema/RJ**. Ele reúne em uma única plataforma, em nuvem e em tempo real, o controle de **materiais didáticos, uniformes e itens da cantina**, substituindo as tabelas e planilhas manuais usadas hoje, uma para cada tipo de item.
 
-Ao mesmo tempo, permite que os **responsáveis** cadastrem as **alergias, intolerâncias e restrições alimentares** dos filhos (com laudo médico), recebam **alertas automáticos** de conflito com o cardápio e acompanhem alimentação, materiais e uniformes pelo aplicativo.
+O foco do projeto é o **estoque escolar como um todo**: saber o que chegou, o que saiu, o que está acabando e o que foi entregue a cada aluno, em cada escola, com visão consolidada para a Secretaria de Educação e a Prefeitura.
 
-O sistema também entrega **relatórios e alertas** sobre estoque, entregas e consumo para escolas, Secretaria de Educação e Prefeitura.
+Os **responsáveis** acompanham tudo pelo **aplicativo mobile** (Android e iOS): chegada de materiais e uniformes, entregas feitas ao aluno e avisos da escola. Como diferencial, o sistema também oferece um **módulo de alimentação segura**: os responsáveis cadastram alergias, intolerâncias e restrições alimentares (com laudo médico) e recebem alertas automáticos de conflito com o cardápio.
 
 > 🎓 **Contexto acadêmico:** projeto da disciplina **Práticas Extensionistas Integradoras I**, do curso de **Engenharia de Software** da **Universidade de Vassouras (Univassouras), Campus Universitário de Saquarema**, semestre 2026.1.
 > Professor da disciplina: **Prof. Dr. André Ricardo de Carvalho Saraiva**.
@@ -66,15 +66,16 @@ O sistema também entrega **relatórios e alertas** sobre estoque, entregas e co
 
 ## ⚠️ O problema
 
-Muitas crianças e responsáveis sofrem com a distribuição de alimentos nas cantinas das escolas municipais: alunos com alergias ou intolerâncias não têm garantia de acesso a uma alimentação adequada. Além disso, há problemas na gestão do estoque de uniformes e materiais pelas equipes administrativas.
+A gestão de estoque das escolas municipais é feita de forma manual, e isso afeta toda a rede: as equipes administrativas têm pouco pessoal e orçamento limitado, não há visão consolidada do que cada escola tem, e os responsáveis não sabem quando materiais e uniformes chegaram. Em paralelo, alunos com alergias ou intolerâncias não têm garantia de uma alimentação adequada na cantina.
 
 | Dor identificada | Consequência |
 |---|---|
-| Controle de estoque manual, em **tabelas e planilhas individuais** para cada tipo de item | Erros de registro, desperdício e falta de transparência |
-| Ausência de controle **individualizado** de alimentação | Alunos com restrições sem garantia de refeição adequada |
-| Responsáveis sem meios digitais de acompanhamento | Dúvidas recorrentes sobre chegada de materiais e uniformes |
+| Controle de estoque manual, em **tabelas e planilhas individuais** para cada tipo de item | Erros de registro, desperdício, falta de itens e falta de transparência |
+| Pouca visibilidade de **materiais didáticos e uniformes** (chegada, saldo, entrega por aluno) | Atrasos, itens parados e dúvidas recorrentes dos responsáveis |
+| Responsáveis sem meios digitais de acompanhamento | Falta de informação sobre chegada de materiais e uniformes |
 | Órgãos reguladores da Prefeitura dependem de relatórios manuais e lentos | Pouca visibilidade da rede e decisões menos embasadas |
 | Equipes administrativas reduzidas e orçamento limitado | Sobrecarga de trabalho manual |
+| Ausência de controle **individualizado** de alimentação | Alunos com restrições sem garantia de refeição adequada |
 
 ### 🏫 Validação em campo
 
@@ -94,29 +95,43 @@ A equipe visitou a **Escola Municipal José Bandeira** duas vezes:
 | 🏫 Abrangência inicial | **80%** das escolas municipais de Saquarema |
 | 👨‍👩‍👧 Acesso das famílias | **80%** dos responsáveis com acesso ao sistema |
 | ⏱️ Eficiência | Reduzir em até **40%** o tempo gasto na gestão manual de estoques |
+| 📦 Acompanhamento | Chegada e entrega de uniformes e materiais acompanhadas em tempo real |
 | 🥜 Segurança alimentar | **100%** dos alunos cadastrados com restrições devidamente atendidos |
-| 📦 Acompanhamento | Chegada de uniformes e materiais acompanhada em tempo real |
 | 🚀 Expansão | **100%** das escolas do município (estimadas em cerca de **94**) e, depois, municípios vizinhos |
 
 ---
 
 ## ✨ Funcionalidades
 
+### 📦 Núcleo: gestão do estoque escolar
+
 | Módulo | O que faz |
 |---|---|
-| 🍽️ **Estoque da cantina** | Cadastro de alimentos, entrada e saída (consumo, descarte ou perda), saldo em tempo real, alerta de estoque mínimo, falta e validade |
-| 📚 **Materiais didáticos** | Cadastro, chegada, saída e saldo de cada material |
+| 📚 **Materiais didáticos** | Cadastro, chegada, saída e saldo de cada material, por escola |
 | 👕 **Uniformes** | Controle por tipo e tamanho, chegada, entrega aos alunos e histórico por aluno |
+| 🍽️ **Itens da cantina** | Cadastro de itens, entrada e saída (consumo, descarte ou perda), saldo em tempo real, alerta de estoque mínimo, falta e validade |
 | 💲 **Financeiro** | Cálculo automático de ganhos, lucros e prejuízos a partir dos preços de compra e venda |
-| 🥗 **Cardápio** | Prato do dia com ingredientes, cadastrado com até 24h de antecedência |
-| 🥜 **Personalização alimentar** | Cadastro de alergias, intolerâncias e restrições pelo responsável, com anexo de laudo médico |
-| ⚠️ **Controle de alergias integrado ao cardápio** | Compara automaticamente ingredientes × restrições e emite alerta de conflito |
-| ✅ **Refeição adequada** | Cantina indica refeição alternativa e o responsável aprova ou recusa pelo app |
-| 📱 **App dos responsáveis** | Acompanhamento em tempo real de alimentação, materiais e uniformes, com quadro de mensagens e notificações push |
-| 📊 **Painel de gestão** | Indicadores de estoque, consumo e alertas da rede para diretores, coordenadores e Secretaria |
+| 📊 **Painel de gestão** | Indicadores de estoque, consumo, entregas e alertas da rede para diretores, coordenadores e Secretaria |
 | 🧾 **Relatórios** | Relatórios para Prefeitura e órgãos reguladores, com exportação em **PDF** e **XLSX** |
 | 🔐 **Administração** | Escolas, usuários, perfis, logins pré-registrados, vínculo aluno × responsável, parâmetros e registro de atividades |
 | 🎓 **Suporte** | Treinamento das equipes, vídeos tutoriais para responsáveis, suporte técnico e atualizações |
+
+### 📱 Aplicativo dos responsáveis
+
+| Recurso | O que faz |
+|---|---|
+| 📦 **Materiais e uniformes** | Acompanhamento do que chegou e do que foi entregue ao aluno |
+| 🔔 **Avisos e notificações** | Quadro de mensagens e notificações push da escola |
+| 🥗 **Alimentação do aluno** | Acompanhamento da alimentação em tempo real |
+| 🥜 **Restrições alimentares** | Cadastro de alergias e intolerâncias, com anexo de laudo médico |
+
+### 🥜 Módulo de alimentação segura (diferencial)
+
+| Recurso | O que faz |
+|---|---|
+| 🥗 **Cardápio** | Prato do dia com ingredientes, cadastrado com até 24h de antecedência |
+| ⚠️ **Controle de alergias integrado ao cardápio** | Compara automaticamente ingredientes × restrições e emite alerta de conflito |
+| ✅ **Refeição adequada** | Cantina indica refeição alternativa e o responsável aprova ou recusa pelo app |
 
 ---
 
@@ -128,21 +143,45 @@ A equipe visitou a **Escola Municipal José Bandeira** duas vezes:
 | 🏛️ **Gestor da Secretaria de Educação** | Acompanha o painel da rede e os relatórios |
 | 🧑‍🏫 **Diretor / Coordenador** | Acompanha a escola, estoque, alertas e relatórios |
 | 🗂️ **Equipe administrativa** | Controla materiais e uniformes, cadastra alunos e logins dos responsáveis |
-| 👩‍🍳 **Funcionário da cantina** | Controla estoque de alimentos, cadastra cardápio e indica refeições adequadas |
-| 👨‍👩‍👧 **Responsável legal** | Usa o app: restrições, laudos, aprovação de refeições, acompanhamento e notificações |
+| 👩‍🍳 **Funcionário da cantina** | Controla estoque de itens da cantina, cadastra cardápio e indica refeições adequadas |
+| 👨‍👩‍👧 **Responsável legal** | Usa o app: acompanhamento de materiais e uniformes, notificações, restrições, laudos e aprovação de refeições |
 
-> Os **alunos** são os beneficiários diretos, especialmente os que têm restrições alimentares.
+> Os **alunos** são os beneficiários diretos, especialmente os que precisam de materiais, uniformes e alimentação adequada.
 
 ---
 
 ## 🔄 Como o sistema funciona
+
+### 📦 Fluxo principal: estoque escolar
+
+1. A escola cadastra os **itens** (materiais didáticos, uniformes e itens da cantina) e seus saldos mínimos.
+2. A equipe registra a **entrada** quando o material chega e a **saída** quando é entregue, consumido ou descartado.
+3. O sistema atualiza o **saldo em tempo real** e emite **alertas** de falta, estoque mínimo e validade.
+4. A entrega de uniformes e materiais fica registrada no **histórico do aluno**.
+5. O **responsável** é avisado pelo app quando o material ou uniforme chega e quando é entregue.
+6. O **gestor** acompanha o painel e os relatórios da rede em tempo real.
+
+```mermaid
+sequenceDiagram
+    participant E as Equipe da escola (web)
+    participant S as Sistema
+    participant R as Responsável (app)
+    participant G as Gestor (web)
+    E->>S: Registra entrada de materiais e uniformes
+    S->>S: Atualiza saldo e verifica estoque mínimo
+    S-->>R: Notifica chegada do material ou uniforme
+    E->>S: Registra entrega ao aluno
+    S-->>R: Notifica entrega realizada
+    S-->>G: Atualiza painel e relatórios da rede
+```
+
+### 🥜 Fluxo complementar: alimentação segura
 
 1. A escola gera um **login pré-registrado** para cada responsável, que troca a senha no primeiro acesso.
 2. O responsável cadastra **alergias e restrições** (e o laudo médico) pelo app.
 3. A cantina cadastra o **prato do dia** no sistema web, com até **24h de antecedência**.
 4. O sistema **identifica conflitos** entre ingredientes e restrições e emite **alerta automático**.
 5. O funcionário da cantina **indica uma refeição adequada** e aguarda a **aprovação do responsável**.
-6. O **gestor** acompanha o painel da rede em tempo real.
 
 ```mermaid
 sequenceDiagram
@@ -163,7 +202,7 @@ sequenceDiagram
 
 ```mermaid
 flowchart LR
-    A["👩‍🍳 Cantina e equipe da escola"] --> W["🖥️ Painel Web responsivo"]
+    A["🗂️ Equipe da escola e cantina"] --> W["🖥️ Painel Web responsivo"]
     G["🏛️ Secretaria e gestores"] --> W
     R["👨‍👩‍👧 Responsáveis"] --> M["📱 App Mobile Android e iOS"]
     W --> API["⚙️ API REST modular"]
@@ -328,6 +367,13 @@ flowchart TD
 erDiagram
     ESCOLA ||--o{ ALUNO : matricula
     ALUNO }o--o{ RESPONSAVEL_LEGAL : vinculo
+    ESCOLA ||--o{ MATERIAL_DIDATICO : controla
+    ESCOLA ||--o{ UNIFORME : controla
+    ALUNO ||--o{ ENTREGA_ITEM : recebe
+    ESCOLA ||--o{ ITEM_CANTINA : possui
+    ITEM_CANTINA ||--o{ ENTRADA_ALIMENTO : recebe
+    ITEM_CANTINA ||--o{ SAIDA_ALIMENTO : registra
+    FORNECEDOR ||--o{ ENTRADA_ALIMENTO : fornece
     ALUNO ||--o{ RESTRICAO_ALUNO : possui
     RESTRICAO_ALIMENTAR ||--o{ RESTRICAO_ALUNO : classifica
     RESTRICAO_ALUNO ||--o{ LAUDO_MEDICO : comprovada_por
@@ -335,13 +381,6 @@ erDiagram
     CARDAPIO }o--o{ INGREDIENTE : contem
     CARDAPIO ||--o{ CONFLITO_ALIMENTAR : gera
     CONFLITO_ALIMENTAR ||--o{ REFEICAO_INDICADA : resolvida_por
-    ESCOLA ||--o{ ITEM_CANTINA : possui
-    ITEM_CANTINA ||--o{ ENTRADA_ALIMENTO : recebe
-    ITEM_CANTINA ||--o{ SAIDA_ALIMENTO : registra
-    FORNECEDOR ||--o{ ENTRADA_ALIMENTO : fornece
-    ESCOLA ||--o{ MATERIAL_DIDATICO : controla
-    ESCOLA ||--o{ UNIFORME : controla
-    ALUNO ||--o{ ENTREGA_ITEM : recebe
     PERFIL ||--o{ USUARIO : define
     USUARIO ||--o{ SESSAO : abre
     USUARIO ||--o{ TENTATIVA_ACESSO : registra
@@ -351,13 +390,13 @@ erDiagram
 
 | Área | Classes |
 |---|---|
-| **Cardápio e restrições** | `Cardapio`, `Ingrediente`, `RestricaoAlimentar`, `ConflitoAlimentar`, `VerificadorConflito`, `RefeicaoIndicada`, `LaudoMedico`, `StatusRefeicao` |
 | **Materiais e uniformes** | `ItemEscolar`, `MaterialDidatico`, `Uniforme`, `MovimentacaoItemEscolar`, `EntradaItemEscolar`, `SaidaItemEscolar`, `EntregaItemEscolar`, `ResultadoFinanceiro` |
 | **Estoque da cantina** | `ItemCantina`, `EstoqueCantina`, `MovimentacaoEstoque`, `EntradaAlimento`, `SaidaAlimento`, `Fornecedor`, `AlertaEstoque` |
 | **Painel e relatórios** | `PainelGestao`, `IndicadorPainel`, `Relatorio` (financeiro, atividades, estoque da cantina, materiais e uniformes) |
 | **App e notificações** | `ServicoNotificacao`, `Notificacao`, `QuadroMensagens`, `DispositivoMovel`, `RegistroAlimentacao`, `SituacaoItemAluno` |
 | **Administração** | `Aluno`, `Escola`, `ResponsavelLegal`, `VinculoAlunoResponsavel`, `Administrador`, `RegistroAtividade`, `ConfiguracaoSistema`, `RegraAlerta` |
 | **Login e senha** | `Usuario`, `Perfil`, `Permissao`, `Sessao`, `TentativaLogin`, `RecuperacaoSenha`, `ServicoAutenticacao` |
+| **Cardápio e restrições** | `Cardapio`, `Ingrediente`, `RestricaoAlimentar`, `ConflitoAlimentar`, `VerificadorConflito`, `RefeicaoIndicada`, `LaudoMedico`, `StatusRefeicao` |
 
 ---
 
@@ -385,7 +424,8 @@ Planejamento das etapas de levantamento, modelagem e documentação (novembro):
 - [x] Landing page
 - [x] Documentação de requisitos (v0.1)
 - [x] Diagramas de casos de uso, atividades, classes e DER
-- [ ] Protótipo de telas e do app
+- [x] Aplicativo mobile dos responsáveis (primeira versão)
+- [ ] Protótipo de telas do painel web
 - [ ] MVP do sistema completo
 - [ ] Testes com pelo menos 2 escolas piloto
 - [ ] Rollout para 80% das escolas e capacitação das equipes
@@ -508,8 +548,8 @@ Recomenda-se comparar ao menos três empresas por categoria antes de contratar.
 
 | 💪 Forças | 🌱 Oportunidades |
 |---|---|
-| Solução integrada: cantina, materiais e uniformes em um só sistema | Nenhum concorrente identificado em Saquarema |
-| Alergias integradas ao cardápio, com alertas às famílias (diferencial) | Necessidade de substituir planilhas por gestão digital |
+| Solução integrada: materiais, uniformes e cantina em um só sistema | Nenhum concorrente identificado em Saquarema |
+| Controle de alergias integrado ao cardápio, com alertas às famílias (diferencial) | Necessidade de substituir planilhas por gestão digital |
 | Web e mobile, em nuvem e escalável | Normas de alimentação escolar (PNAE) preveem atenção a restrições |
 | Margem de contribuição de ~98,7% e investimento inicial de R$ 250 | Recursos da educação municipal como fonte de pagamento |
 | Equipe multidisciplinar com processo ágil (Scrum, CI/CD, testes) | Expansão de 80% para 100% das escolas e outros municípios |
@@ -546,12 +586,12 @@ Recomenda-se comparar ao menos três empresas por categoria antes de contratar.
 
 | Risco | Ação preventiva | Plano B |
 |---|---|---|
-| Adesão lenta das escolas | Demonstrações ao vivo, vídeos e grupo piloto | Implantar em etapas, priorizando escolas com mais restrições alimentares |
+| Adesão lenta das escolas | Demonstrações ao vivo, vídeos e grupo piloto | Implantar em etapas, priorizando as escolas com maior volume de estoque e mais restrições alimentares |
 | Atraso na contratação | Antecipar apresentação e documentação técnica | Reduzir atividades e gastos até a assinatura |
 | Marketing sem efeito | Palestras, vídeos tutoriais e testes ao vivo | Visitas a diretores e depoimentos de escolas |
 | Necessidade de mais recursos | Definir capital de giro e manter reserva | Renegociar preço e prazos com a Prefeitura |
 | Custos de nuvem acima do previsto | Comparar AWS, Azure e GCP e criar alertas de consumo | Otimizar a arquitetura ou migrar de provedor |
-| Entrada de concorrentes | Manter o diferencial de alergias integradas e o suporte | Ajustar preço e acelerar entregas |
+| Entrada de concorrentes | Manter o diferencial da gestão integrada de estoque com alergias integradas e o suporte | Ajustar preço e acelerar entregas |
 | Falta de internet ou baixa adesão | Incluir internet no contrato e oferecer tutoriais | Treinamento presencial adicional |
 | Incidente de segurança ou LGPD | Backup diário, controle de acesso e monitoramento | Plano de recuperação de desastres e comunicação aos afetados |
 
@@ -577,7 +617,7 @@ Recomenda-se comparar ao menos três empresas por categoria antes de contratar.
 
 Levantamento de requisitos → planejamento do ciclo → desenvolvimento → revisão de código entre pares → testes automatizados e manuais → homologação com a Secretaria → deploy em produção via CI/CD → Sprint Review e Retrospective.
 
-**Pós-implantação:** suporte técnico, manutenção corretiva e evolutiva, backup diário, monitoramento de segurança e LGPD, atualização de cardápio e estoques pelas próprias escolas.
+**Pós-implantação:** suporte técnico, manutenção corretiva e evolutiva, backup diário, monitoramento de segurança e LGPD, atualização de estoques e cardápio pelas próprias escolas.
 
 ---
 
