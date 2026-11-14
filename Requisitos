@@ -1,0 +1,97 @@
+# 📋 Requisitos do SIGECE
+
+[← Voltar ao README](../README.md)
+
+## Requisitos funcionais
+
+### 🔐 Login e senha
+
+| ID | Requisito |
+|---|---|
+| RF001 | Realizar login na versão web ou no app. O login dos responsáveis é pré-registrado pela escola |
+| RF002 | Alterar senha, inclusive no primeiro acesso |
+| RF003 | Recuperar senha por link ou código enviado ao contato cadastrado |
+| RF004 | Encerrar sessão, com logout automático por inatividade |
+| RF005 | Bloquear temporariamente o acesso após várias tentativas inválidas |
+| RF006 | Controlar acesso por perfil (administrador, Secretaria, diretor/coordenador, cantina, responsável) |
+
+### 🛠️ Administração
+
+| ID | Requisito |
+|---|---|
+| RF007 | Gerenciar escolas (cadastrar, editar, consultar e desativar) |
+| RF008 | Gerenciar usuários e atribuir perfis de acesso |
+| RF009 | Pré-registrar logins dos responsáveis |
+| RF010 | Cadastrar alunos e vinculá-los a responsáveis e à unidade escolar |
+| RF011 | Redefinir senha de usuários, com troca obrigatória no próximo acesso |
+| RF012 | Consultar registro de atividades, filtrando por usuário, escola e período |
+| RF013 | Gerenciar parâmetros: categorias de itens, unidades de medida, tipos de alergia e regras de alerta |
+
+### 📚 Materiais didáticos e uniformes
+
+| ID | Requisito |
+|---|---|
+| RF019 | Controlar estoque de materiais didáticos |
+| RF020 | Controlar estoque de uniformes (tipo e tamanho) |
+| RF021 | Registrar entrega de materiais e uniformes a cada aluno, com histórico |
+| RF022 | Calcular ganhos, lucros e prejuízos |
+
+### 🍽️ Estoque da cantina
+
+| ID | Requisito |
+|---|---|
+| RF014 | Cadastrar itens da cantina (nome, categoria, unidade, estoque mínimo e preço de compra) |
+| RF015 | Registrar entrada de alimentos (item, quantidade, data, fornecedor e validade) |
+| RF016 | Registrar saída de alimentos (consumo, descarte ou perda) |
+| RF017 | Consultar saldo de estoque em tempo real |
+| RF018 | Alertar falta, estoque mínimo e proximidade do vencimento |
+
+### 🥜 Cardápio e restrições alimentares
+
+| ID | Requisito |
+|---|---|
+| RF023 | Cadastrar cardápio (prato do dia e ingredientes) com até 24h de antecedência |
+| RF024 | Cadastrar alergias e restrições alimentares pelo app, com possibilidade de alteração |
+| RF025 | Anexar laudo médico que comprova a restrição |
+| RF026 | Identificar conflito entre cardápio e restrições, com alerta automático |
+| RF027 | Confirmar refeição adequada, aguardando a aprovação do responsável |
+| RF028 | Aprovar ou recusar a refeição indicada pela escola |
+
+### 📱 App dos responsáveis, painel e relatórios
+
+| ID | Requisito |
+|---|---|
+| RF029 | Acompanhar a alimentação do aluno em tempo real |
+| RF030 | Acompanhar materiais e uniformes do aluno |
+| RF031 | Receber alertas em quadro de mensagens e notificações no dispositivo |
+| RF032 | Visualizar painel de gestão |
+| RF033 | Gerar relatórios |
+| RF034 | Exportar relatórios (PDF e XLSX) |
+
+## Requisitos não funcionais
+
+| ID | Requisito |
+|---|---|
+| NF001 | **Web responsiva** (escolas e gestores) e **app Android e iOS** (responsáveis) |
+| NF002 | **Usabilidade:** interface simples para equipes reduzidas e responsáveis com pouca familiaridade tecnológica |
+| NF003 | **Material de apoio:** vídeos tutoriais e treinamento |
+| NF004 | **Segurança:** autenticação, autorização, senhas armazenadas com segurança e comunicação criptografada |
+| NF005 | **LGPD**, com atenção aos dados sensíveis de saúde (alergias, restrições e laudos) |
+| NF006 | **Banco relacional** em nuvem |
+| NF007 | **Disponibilidade** com acesso em tempo real |
+| NF008 | **Desempenho:** atender até 90% dos usuários ativos simultâneos no pico, com capacidade pelo menos 30% acima da demanda estimada |
+| NF009 | **Escalabilidade horizontal** (auto scaling) |
+| NF010 | **Backup automático diário** e plano de recuperação de desastres |
+| NF011 | Ambientes de **desenvolvimento, homologação e produção**, com **CI/CD** |
+| NF012 | **Conectividade:** escolas com internet, de responsabilidade da Prefeitura |
+
+## Perfis de usuário
+
+| Perfil | Papel no sistema |
+|---|---|
+| 🛠️ Administrador | Gerencia escolas, usuários, perfis, parâmetros e consulta o registro de atividades |
+| 🏛️ Gestor da Secretaria | Acompanha o painel da rede e os relatórios |
+| 🧑‍🏫 Diretor / Coordenador | Acompanha a escola, estoque, alertas e relatórios |
+| 🗂️ Equipe administrativa | Controla materiais e uniformes, cadastra alunos e logins dos responsáveis |
+| 👩‍🍳 Funcionário da cantina | Controla estoque da cantina, cadastra cardápio e indica refeições adequadas |
+| 👨‍👩‍👧 Responsável legal | Usa o app: materiais, uniformes, notificações, restrições, laudos e aprovação de refeições |
