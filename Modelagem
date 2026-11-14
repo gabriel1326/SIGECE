@@ -1,0 +1,85 @@
+# 🗄️ Modelagem do SIGECE
+
+[← Voltar ao README](../README.md)
+
+## 🥜 Fluxo de alimentação segura
+
+1. A escola gera um **login pré-registrado** para cada responsável, que troca a senha no primeiro acesso.
+2. O responsável cadastra **alergias e restrições** (e o laudo médico) pelo app.
+3. A cantina cadastra o **prato do dia** com até **24h de antecedência**.
+4. O sistema **identifica conflitos** e emite **alerta automático**.
+5. A cantina **indica uma refeição adequada** e aguarda a **aprovação do responsável**.
+
+```mermaid
+sequenceDiagram
+    participant R as Responsável (app)
+    participant S as Sistema
+    participant C as Cantina (web)
+    R->>S: Cadastra alergias e anexa laudo médico
+    C->>S: Cadastra prato do dia com ingredientes
+    S->>S: Compara ingredientes com restrições
+    S-->>R: Alerta automático de conflito
+    C->>S: Indica refeição adequada ao aluno
+    S-->>R: Solicita aprovação da refeição
+    R->>S: Aprova ou recusa
+    S-->>C: Retorna a decisão do responsável
+```
+
+## 🔐 Fluxo de autenticação
+
+```mermaid
+flowchart TD
+    A([Início]) --> B["Informar login e senha RF001"]
+    B --> C{"Credenciais válidas?"}
+    C -- Não --> D["Registrar tentativa inválida"]
+    D --> E{"Limite de tentativas excedido?"}
+    E -- Não --> B
+    E -- Sim --> F["Bloquear temporariamente e informar RF005"]
+    F --> Z([Fim])
+    C -- Sim --> G{"Primeiro acesso com login pré-registrado?"}
+    G -- Sim --> H["Alterar a senha RF002"]
+    H --> I["Controlar acesso por perfil RF006"]
+    G -- Não --> I
+    I --> J["Utilizar o sistema conforme o perfil"]
+    J --> K{"Logout ou inatividade?"}
+    K -- Não --> J
+    K -- Sim --> L["Encerrar a sessão RF004"]
+    L --> Z
+```
+
+## 🧬 Modelo entidade-relacionamento (simplificado)
+
+```mermaid
+erDiagram
+    ESCOLA ||--o{ ALUNO : matricula
+    ALUNO }o--o{ RESPONSAVEL_LEGAL : vinculo
+    ESCOLA ||--o{ MATERIAL_DIDATICO : controla
+    ESCOLA ||--o{ UNIFORME : controla
+    ALUNO ||--o{ ENTREGA_ITEM : recebe
+    ESCOLA ||--o{ ITEM_CANTINA : possui
+    ITEM_CANTINA ||--o{ ENTRADA_ALIMENTO : recebe
+    ITEM_CANTINA ||--o{ SAIDA_ALIMENTO : registra
+    FORNECEDOR ||--o{ ENTRADA_ALIMENTO : fornece
+    ALUNO ||--o{ RESTRICAO_ALUNO : possui
+    RESTRICAO_ALIMENTAR ||--o{ RESTRICAO_ALUNO : classifica
+    RESTRICAO_ALUNO ||--o{ LAUDO_MEDICO : comprovada_por
+    ESCOLA ||--o{ CARDAPIO : publica
+    CARDAPIO }o--o{ INGREDIENTE : contem
+    CARDAPIO ||--o{ CONFLITO_ALIMENTAR : gera
+    CONFLITO_ALIMENTAR ||--o{ REFEICAO_INDICADA : resolvida_por
+    PERFIL ||--o{ USUARIO : define
+    USUARIO ||--o{ SESSAO : abre
+    USUARIO ||--o{ TENTATIVA_ACESSO : registra
+```
+
+## 🧩 Principais classes do domínio
+
+| Área | Classes |
+|---|---|
+| **Materiais e uniformes** | `ItemEscolar`, `MaterialDidatico`, `Uniforme`, `MovimentacaoItemEscolar`, `EntradaItemEscolar`, `SaidaItemEscolar`, `EntregaItemEscolar`, `ResultadoFinanceiro` |
+| **Estoque da cantina** | `ItemCantina`, `EstoqueCantina`, `MovimentacaoEstoque`, `EntradaAlimento`, `SaidaAlimento`, `Fornecedor`, `AlertaEstoque` |
+| **Painel e relatórios** | `PainelGestao`, `IndicadorPainel`, `Relatorio` |
+| **App e notificações** | `ServicoNotificacao`, `Notificacao`, `QuadroMensagens`, `DispositivoMovel`, `RegistroAlimentacao`, `SituacaoItemAluno` |
+| **Administração** | `Aluno`, `Escola`, `ResponsavelLegal`, `VinculoAlunoResponsavel`, `Administrador`, `RegistroAtividade`, `ConfiguracaoSistema`, `RegraAlerta` |
+| **Login e senha** | `Usuario`, `Perfil`, `Permissao`, `Sessao`, `TentativaLogin`, `RecuperacaoSenha`, `ServicoAutenticacao` |
+| **Cardápio e restrições** | `Cardapio`, `Ingrediente`, `RestricaoAlimentar`, `ConflitoAlimentar`, `VerificadorConflito`, `RefeicaoIndicada`, `LaudoMedico`, `StatusRefeicao` |
